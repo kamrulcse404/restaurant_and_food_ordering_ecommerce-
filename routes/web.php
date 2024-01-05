@@ -32,5 +32,5 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 
-Route::get('admin/dashboard', [AdminDashboardContraoller::class, 'index'])->middleware('auth')->name('admin.dashboard');
+Route::get('admin/dashboard', [AdminDashboardContraoller::class, 'index'])->middleware('auth', 'role:admin')->name('admin.dashboard');
 
