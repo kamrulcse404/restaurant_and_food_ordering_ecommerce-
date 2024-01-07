@@ -120,7 +120,7 @@
     <!--main/custom js-->
     <script src="{{ asset('frontend/js/main.js') }}"></script>
 
-
+    <!--add dynamic validation message js-->
     <script>
         toastr.options.progressBar = true;
         @if ($errors->any())
