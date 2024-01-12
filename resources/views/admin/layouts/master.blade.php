@@ -93,6 +93,7 @@
         });
     </script>
 
+@stack('scripts')
 
 </body>
 
