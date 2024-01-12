@@ -21,6 +21,13 @@
                         @method('PUT')
 
                         <div class="form-group">
+                            <div id="image-preview" class="image-preview">
+                                <label for="image-upload" id="image-label">Choose File</label>
+                                <input type="file" name="image" id="image-upload" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
                             <label>Name</label>
                             <input type="text" class="form-control" name="name" value="{{ auth()->user()->name }}">
                         </div>
@@ -51,7 +58,7 @@
 
                         @csrf
                         @method('PUT')
-                        
+
                         <div class="form-group">
                             <label>Current Password</label>
                             <input type="password" class="form-control" name="current_password">
