@@ -2,8 +2,8 @@
 
 @section('content')
     <!--=============================
-                    BREADCRUMB START
-                ==============================-->
+                            BREADCRUMB START
+                        ==============================-->
     <section class="fp__breadcrumb" style="background: url(images/counter_bg.jpg);">
         <div class="fp__breadcrumb_overlay">
             <div class="container">
@@ -18,13 +18,13 @@
         </div>
     </section>
     <!--=============================
-                    BREADCRUMB END
-                ==============================-->
+                            BREADCRUMB END
+                        ==============================-->
 
 
     <!--=========================
-                    DASHBOARD START
-                ==========================-->
+                            DASHBOARD START
+                        ==========================-->
     <section class="fp__dashboard mt_120 xs_mt_90 mb_100 xs_mb_70">
         <div class="container">
             <div class="fp__dashboard_area">
@@ -73,8 +73,22 @@
                                     aria-controls="v-pills-settings" aria-selected="false"><span><i
                                             class="fas fa-user-lock"></i></span> Change Password </button>
 
-                                <button class="nav-link" type="button"><span> <i class="fas fa-sign-out-alt"></i>
-                                    </span> Logout</button>
+
+
+                                <!-- Authentication -->
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+
+                                    <button class="nav-link"
+                                        onclick="event.preventDefault();
+                                    this.closest('form').submit();"
+                                        type="button"><span> <i class="fas fa-sign-out-alt"></i>
+                                        </span> Logout</button>
+
+
+                                </form>
+
+
                             </div>
                         </div>
                     </div>
@@ -134,13 +148,15 @@
                                                         <div class="col-12">
                                                             <div class="fp__comment_imput_single">
                                                                 <label>name</label>
-                                                                <input type="text" placeholder="Name" name="name" value="{{ auth()->user()->name }}">
+                                                                <input type="text" placeholder="Name" name="name"
+                                                                    value="{{ auth()->user()->name }}">
                                                             </div>
                                                         </div>
                                                         <div class="col-xl-12 col-lg-12">
                                                             <div class="fp__comment_imput_single">
                                                                 <label>email</label>
-                                                                <input type="email" placeholder="Email" name="email" value="{{ auth()->user()->email }}">
+                                                                <input type="email" placeholder="Email" name="email"
+                                                                    value="{{ auth()->user()->email }}">
                                                             </div>
                                                         </div>
 
@@ -1237,15 +1253,15 @@
     </div>
     <!-- CART POPUT END -->
     <!--=========================
-                    DASHBOARD END
-                ==========================-->
+                            DASHBOARD END
+                        ==========================-->
 @endsection
 
 
 @push('scripts')
     <script>
-        $(document).ready(function(){
-            $('#upload').on('click', function(){
+        $(document).ready(function() {
+            $('#upload').on('click', function() {
                 let form = $('#avatar_form')[0];
                 let formData = new FormData(form);
 
@@ -1268,4 +1284,3 @@
         });
     </script>
 @endpush
-
