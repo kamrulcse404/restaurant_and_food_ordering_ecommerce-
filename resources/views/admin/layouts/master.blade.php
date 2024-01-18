@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{{ asset('admin/assets/modules/bootstrap/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('admin/assets/modules/fontawesome/css/all.min.css') }}" />
 
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+
     <link rel="stylesheet" href="{{ asset('admin/assets/css/toastr.min.css') }}">
 
     <!-- Template CSS -->
@@ -64,6 +66,8 @@
     <!-- Template JS File -->
     <script src="{{ asset('admin/assets/js/scripts.js') }}"></script>
     <script src="{{ asset('admin/assets/js/custom.js') }}"></script>
+
+    <script src="//cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
 
 
     <script src="{{ asset('admin/assets/js/toastr.min.js') }}"></script>
