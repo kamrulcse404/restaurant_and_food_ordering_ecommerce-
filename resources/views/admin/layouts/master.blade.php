@@ -45,10 +45,10 @@
             </div>
             <footer class="main-footer">
                 <div class="footer-left">
-                    Copyright &copy; 2018
+                    Copyright &copy; 2024
                     <div class="bullet"></div>
-                    Design By
-                    <a href="https://nauval.in/">Muhamad Nauval Azhar</a>
+                    Developed By
+                    <a href="https://github.com/kamrulcse404/restaurant_and_food_ordering_ecommerce-">Md Kamrul Hasan</a>
                 </div>
                 <div class="footer-right"></div>
             </footer>
